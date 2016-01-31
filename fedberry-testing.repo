@@ -1,0 +1,8 @@
+[fedberry-testing]
+name=FedBerry Testing $releasever
+baseurl=https://vaughan.fedorapeople.org/fed23/testing/RPMS/
+enabled=0
+gpgcheck=1
+metadata_expire=6h
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpi2
+skip_if_unavailable=False

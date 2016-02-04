@@ -1,6 +1,7 @@
 [fedberry]
 name=FedBerry $releasever
-baseurl=https://vaughan.fedorapeople.org/fed23/RPMS/
+baseurl=http://download.fedberry.org/releases/23/packages/stable/RPMS/
+baseurl=https://vaughan.fedorapeople.org/releases/23/packages/stable/RPMS/
 enabled=1
 gpgcheck=1
 metadata_expire=6h

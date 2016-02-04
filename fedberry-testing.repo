@@ -1,6 +1,7 @@
 [fedberry-testing]
 name=FedBerry Testing $releasever
-baseurl=https://vaughan.fedorapeople.org/fed23/testing/RPMS/
+baseurl=http://download.fedberry.org/releases/23/packages/testing/RPMS/
+baseurl=https://vaughan.fedorapeople.org/releases/23/packages/testing/RPMS/
 enabled=0
 gpgcheck=1
 metadata_expire=6h

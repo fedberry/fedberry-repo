@@ -1,7 +1,7 @@
 %define bname   fedberry
 %define name    %{bname}-repo
 %define version 23
-%define release 0.1
+%define release 0.2
 
 Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
@@ -43,6 +43,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpi2
 
 %changelog
+* Thu Feb 04 2016 Vaughan <vaughan at agrez dot net> 23-0.2
+- Update to reflect new repo structure
+- Add our new fedberry.org repo (fedorapeople is now a mirror)
+
 * Sun Jan 31 2016 Vaughan <vaughan at agrez dot net> 23-0.1
 - Rename package to fedberry-repo
 - Version now follows FedBerry distro release version

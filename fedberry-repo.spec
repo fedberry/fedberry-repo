@@ -1,7 +1,7 @@
 %define bname   fedberry
 %define name    %{bname}-repo
 %define version 23
-%define release 0.2
+%define release 0.3
 
 Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
@@ -9,6 +9,7 @@ Name:       %{name}
 Version:    %{version}
 Release:    %{release}%{?dist}
 Group:      Development/Tools
+URL:        https://github.com/fedberry
 Source0:    RPM-GPG-KEY-rpi2
 Source1:    %{bname}.repo
 Source2:    %{bname}-testing.repo
@@ -39,10 +40,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
-%config(noreplace) %{_sysconfdir}/yum.repos.d/*.repo
+#%%config(noreplace) #%%{_sysconfdir}/yum.repos.d/*.repo
+%config %{_sysconfdir}/yum.repos.d/*.repo
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpi2
 
 %changelog
+* Sat Feb 06 2016 Vaughan <vaughan at agrez dot net> 23-0.3
+- Repos are moving, replace all existing repo files
+
 * Thu Feb 04 2016 Vaughan <vaughan at agrez dot net> 23-0.2
 - Update to reflect new repo structure
 - Add our new fedberry.org repo (fedorapeople is now a mirror)

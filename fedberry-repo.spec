@@ -1,7 +1,7 @@
 %define bname   fedberry
 %define name    %{bname}-repo
-%define version 23
-%define release 0.3
+%define version 24
+%define release 0.1
 
 Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
@@ -10,7 +10,7 @@ Version:    %{version}
 Release:    %{release}%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/fedberry
-Source0:    RPM-GPG-KEY-rpi2
+Source0:    RPM-GPG-KEY-fedberry-%{version}-primary
 Source1:    %{bname}.repo
 Source2:    %{bname}-testing.repo
 Source3:    %{bname}-unstable.repo
@@ -40,11 +40,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
-#%%config(noreplace) #%%{_sysconfdir}/yum.repos.d/*.repo
-%config %{_sysconfdir}/yum.repos.d/*.repo
+%config(noreplace) %{_sysconfdir}/yum.repos.d/*.repo
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpi2
 
 %changelog
+* Wed Jun 15 2016 Vaughan <vaughan at agrez dot net> 24-0.1
+- Update for FedBerry 24 release
+- Add new FedBerry 24 release key
+- Update repo files for altered repository structure
+
 * Sat Feb 06 2016 Vaughan <vaughan at agrez dot net> 23-0.3
 - Repos are moving, replace all existing repo files
 

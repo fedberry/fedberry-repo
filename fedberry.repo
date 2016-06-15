@@ -1,9 +1,9 @@
 [fedberry]
 name=FedBerry $releasever
-baseurl=http://download.fedberry.org/releases/23/packages/stable/RPMS/
-baseurl=https://vaughan.fedorapeople.org/releases/23/packages/stable/RPMS/
+baseurl=http://download.fedberry.org/releases/$releasever/packages/armhfp/stable/
+baseurl=https://vaughan.fedorapeople.org/releases/$releasever/packages/armhfp/stable/
 enabled=1
 gpgcheck=1
 metadata_expire=6h
-gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpi2
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedberry-$releasever-primary
 skip_if_unavailable=False

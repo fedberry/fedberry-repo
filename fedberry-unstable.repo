@@ -1,9 +1,9 @@
 [fedberry-unstable]
 name=FedBerry Unstable $releasever
-baseurl=http://download.fedberry.org/releases/23/packages/unstable/RPMS/
-baseurl=https://vaughan.fedorapeople.org/releases/23/packages/unstable/RPMS/
+baseurl=http://download.fedberry.org/releases/$releasever/packages/armhfp/unstable/
+baseurl=https://vaughan.fedorapeople.org/releases/$releasever/packages/armhfp/unstable/
 enabled=0
 gpgcheck=1
 metadata_expire=6h
-gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpi2
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedberry-$releasever-primary
 skip_if_unavailable=False

@@ -33,7 +33,7 @@ rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d/
 mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/
 install -m 644 *.repo $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d/
-install -m 644 RPM-GPG-KEY-rpi2 $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/
+install -m 644 RPM-GPG-KEY-fedberry-%{version}-primary $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -41,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*.repo
-%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-rpi2
+%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-fedberry-%{version}-primary
 
 %changelog
 * Wed Jun 15 2016 Vaughan <vaughan at agrez dot net> 24-0.1

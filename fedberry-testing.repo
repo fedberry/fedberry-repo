@@ -1,7 +1,7 @@
 [fedberry-testing]
 name=FedBerry Testing $releasever
 baseurl=http://download.fedberry.org/releases/$releasever/packages/armhfp/testing/
-baseurl=https://vaughan.fedorapeople.org/releases/$releasever/packages/armhfp/testing/
+        https://vaughan.fedorapeople.org/releases/$releasever/packages/armhfp/testing/
 enabled=0
 gpgcheck=1
 metadata_expire=6h

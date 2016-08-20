@@ -1,7 +1,7 @@
 [fedberry-unstable]
 name=FedBerry Unstable $releasever
 baseurl=http://download.fedberry.org/releases/$releasever/packages/armhfp/unstable/
-baseurl=https://vaughan.fedorapeople.org/releases/$releasever/packages/armhfp/unstable/
+        https://vaughan.fedorapeople.org/releases/$releasever/packages/armhfp/unstable/
 enabled=0
 gpgcheck=1
 metadata_expire=6h

@@ -1,7 +1,7 @@
 [fedberry]
 name=FedBerry $releasever
 baseurl=http://download.fedberry.org/releases/$releasever/packages/armhfp/stable/
-baseurl=https://vaughan.fedorapeople.org/releases/$releasever/packages/armhfp/stable/
+        https://vaughan.fedorapeople.org/releases/$releasever/packages/armhfp/stable/
 enabled=1
 gpgcheck=1
 metadata_expire=6h

@@ -24,7 +24,7 @@ Package containing a Yum RPM Repository configuration files and GPG key.
 
 %prep
 %setup -c -T
-cp -a %{SOURCE0} %{SOURCE1} %{SOURCE2} %{SOURCE3} .
+cp -a %{sources} .
 
 %build
 

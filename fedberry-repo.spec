@@ -1,7 +1,7 @@
 %define bname   fedberry
 %define name    %{bname}-repo
 %define version 25
-%define release 1
+%define release 2
 
 Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
@@ -14,6 +14,7 @@ Source0:    RPM-GPG-KEY-fedberry-%{version}-primary
 Source1:    %{bname}.repo
 Source2:    %{bname}-testing.repo
 Source3:    %{bname}-unstable.repo
+Source4:    %{bname}-kernel-rt.repo
 BuildArch:  noarch
 Obsoletes:  raspberrypi-repo
 Provides:   raspberrypi-repo
@@ -44,6 +45,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-fedberry-%{version}-primary
 
 %changelog
+* Sun Feb 26 2017 Vaughan <vaughan at agrez dot net> 25-2
+- Add kernel-rt repo
+
 * Mon Jan 02 2017 Vaughan <vaughan at agrez dot net> 25-1
 - Update for FedBerry 25 release
 

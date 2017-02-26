@@ -1,0 +1,9 @@
+[fedberry-kernel-rt]
+name=FedBerry kernel-rt $releasever
+baseurl=http://download.fedberry.org/releases/$releasever/packages/armhfp/kernel-rt/
+        https://vaughan.fedorapeople.org/releases/$releasever/packages/armhfp/kernel-rt/
+enabled=0
+gpgcheck=1
+metadata_expire=6h
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedberry-$releasever-primary
+skip_if_unavailable=False

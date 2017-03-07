@@ -1,24 +1,22 @@
 %define bname   fedberry
 %define name    %{bname}-repo
-%define version 25
-%define release 2
+%define versions 24 25
 
 Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
-Version:    %{version}
-Release:    %{release}%{?dist}
+Version:    25
+Release:    3%{?dist}
 Group:      Development/Tools
-URL:        https://github.com/fedberry
-Source0:    RPM-GPG-KEY-fedberry-%{version}-primary
+URL:        https://github.com/%{bname}
 Source1:    %{bname}.repo
 Source2:    %{bname}-testing.repo
 Source3:    %{bname}-unstable.repo
 Source4:    %{bname}-kernel-rt.repo
+Source5:    RPM-GPG-KEY-%{bname}-24-primary
+Source6:    RPM-GPG-KEY-%{bname}-25-primary
 BuildArch:  noarch
-Obsoletes:  raspberrypi-repo
-Provides:   raspberrypi-repo
-Conflicts:  raspberrypi-repo
+
 
 %description
 Package containing a Yum RPM Repository configuration files and GPG key.
@@ -34,7 +32,9 @@ rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d/
 mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/
 install -m 644 *.repo $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d/
-install -m 644 RPM-GPG-KEY-fedberry-%{version}-primary $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/
+for i in %{versions}; do
+    install -m 644 RPM-GPG-KEY-%{bname}-$i-primary $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/
+done
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -42,9 +42,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*.repo
-%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-fedberry-%{version}-primary
+%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-%{bname}-*-primary
 
 %changelog
+* Tue Mar 07 2017 Vaughan <vaughan at agrez dot net> 25-3
+- Add previous FedBerry 24 primary release key
+
 * Sun Feb 26 2017 Vaughan <vaughan at agrez dot net> 25-2
 - Add kernel-rt repo
 

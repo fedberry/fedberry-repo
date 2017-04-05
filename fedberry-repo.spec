@@ -1,7 +1,7 @@
 %define bname   fedberry
 %define name    %{bname}-repo
 %define version 24
-%define release 0.2
+%define release 1
 
 Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
@@ -44,6 +44,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-fedberry-%{version}-primary
 
 %changelog
+* Wed Apr 05 2017 Vaughan <vaughan at agrez dot net> 24-1
+- Simplify %%prep
+- Switch to using mirrorlists in repo files
+
 * Sat Aug 20 2016 Vaughan <vaughan at agrez dot net> 24-0.2
 - List all urls in one 'baseurl' (fillarios)
 

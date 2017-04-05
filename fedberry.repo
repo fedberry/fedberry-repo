@@ -1,7 +1,6 @@
 [fedberry]
 name=FedBerry $releasever
-baseurl=http://download.fedberry.org/releases/$releasever/packages/armhfp/stable/
-        https://vaughan.fedorapeople.org/releases/$releasever/packages/armhfp/stable/
+mirrorlist=https://fedberry.github.io/mirrorlist_stable
 enabled=1
 gpgcheck=1
 metadata_expire=6h

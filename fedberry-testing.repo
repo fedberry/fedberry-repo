@@ -1,7 +1,6 @@
 [fedberry-testing]
 name=FedBerry Testing $releasever
-baseurl=http://download.fedberry.org/releases/$releasever/packages/armhfp/testing/
-        https://vaughan.fedorapeople.org/releases/$releasever/packages/armhfp/testing/
+mirrorlist=https://fedberry.github.io/mirrorlist_testing
 enabled=0
 gpgcheck=1
 metadata_expire=6h

@@ -1,7 +1,6 @@
 [fedberry-kernel-rt]
 name=FedBerry kernel-rt $releasever
-baseurl=http://download.fedberry.org/releases/$releasever/packages/armhfp/kernel-rt/
-        https://vaughan.fedorapeople.org/releases/$releasever/packages/armhfp/kernel-rt/
+mirrorlist=https://fedberry.github.io/mirrorlist_kernel_rt
 enabled=0
 gpgcheck=1
 metadata_expire=6h

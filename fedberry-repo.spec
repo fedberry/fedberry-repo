@@ -6,7 +6,7 @@ Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
 Version:    25
-Release:    3%{?dist}
+Release:    4%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/%{bname}
 Source1:    %{bname}.repo
@@ -45,6 +45,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-%{bname}-*-primary
 
 %changelog
+* Wed Apr 05 2017 Vaughan <vaughan at agrez dot net> 25-4
+- Switch to using mirrorlists in repo files
+
 * Tue Mar 07 2017 Vaughan <vaughan at agrez dot net> 25-3
 - Add previous FedBerry 24 primary release key
 

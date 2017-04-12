@@ -4,5 +4,6 @@ mirrorlist=https://fedberry.github.io/mirrorlist_stable
 enabled=1
 gpgcheck=1
 metadata_expire=6h
+mirrorlist_expire=24h
 gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedberry-$releasever-primary
 skip_if_unavailable=False

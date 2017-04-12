@@ -6,7 +6,7 @@ Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
 Version:    25
-Release:    4%{?dist}
+Release:    5%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/%{bname}
 Source1:    %{bname}.repo
@@ -45,6 +45,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-%{bname}-*-primary
 
 %changelog
+* Wed Apr 12 2017 Vaughan <vaughan at agrez dot net> 25-5
+- Set mirrorlist to expire every 24 hours
+
 * Wed Apr 05 2017 Vaughan <vaughan at agrez dot net> 25-4
 - Switch to using mirrorlists in repo files
 

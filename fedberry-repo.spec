@@ -1,7 +1,7 @@
 %define bname   fedberry
 %define name    %{bname}-repo
 %define version 24
-%define release 1
+%define release 2
 
 Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
@@ -44,6 +44,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-fedberry-%{version}-primary
 
 %changelog
+* Fri Apr 14 2017 Vaughan <vaughan at agrez dot net> 24-2
+- Expire mirrorlists after 24 hours
+
 * Wed Apr 05 2017 Vaughan <vaughan at agrez dot net> 24-1
 - Simplify %%prep
 - Switch to using mirrorlists in repo files

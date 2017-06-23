@@ -1,6 +1,6 @@
 [fedberry]
 name=FedBerry $releasever
-mirrorlist=https://fedberry.github.io/mirrorlist_stable
+mirrorlist=https://fedberry.github.io/mirrorlist_stable_$releasever
 enabled=1
 gpgcheck=1
 metadata_expire=6h

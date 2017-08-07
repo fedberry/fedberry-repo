@@ -1,12 +1,12 @@
 %define bname   fedberry
 %define name    %{bname}-repo
-%define versions 24 25
+%define versions 24 25 26
 
 Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
-Version:    25
-Release:    6%{?dist}
+Version:    26
+Release:    1%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/%{bname}
 Source1:    %{bname}.repo
@@ -15,6 +15,7 @@ Source3:    %{bname}-unstable.repo
 Source4:    %{bname}-kernel-rt.repo
 Source5:    RPM-GPG-KEY-%{bname}-24-primary
 Source6:    RPM-GPG-KEY-%{bname}-25-primary
+Source7:    RPM-GPG-KEY-%{bname}-26-primary
 BuildArch:  noarch
 
 
@@ -45,6 +46,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-%{bname}-*-primary
 
 %changelog
+* Sat Jul 08 2017 Vaughan <vaughan at agrez dot net> 26-1
+- Update for FedBerry 26 release
+- Add FedBerry 26 primary release key
+
 * Fri Jun 23 2017 Vaughan <vaughan at agrez dot net> 25-6
 - Add a workaround for dnf 'system-upgrade plugin' issues
 

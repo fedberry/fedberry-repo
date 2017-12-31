@@ -6,7 +6,7 @@ Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
 Version:    25
-Release:    6%{?dist}
+Release:    7%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/%{bname}
 Source1:    %{bname}.repo
@@ -47,6 +47,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-%{bname}-*-primary
 
 %changelog
+* Sun Dec 31 2017 Vaughan <vaughan at agrez dot net> 25-7
+- Add FedBerry 26 & 27 release keys
+
 * Fri Jun 23 2017 Vaughan <vaughan at agrez dot net> 25-6
 - Add a workaround for dnf 'system-upgrade plugin' issues
 

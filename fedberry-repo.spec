@@ -6,7 +6,7 @@ Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
 Version:    26
-Release:    1%{?dist}
+Release:    2%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/%{bname}
 Source1:    %{bname}.repo
@@ -47,6 +47,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-%{bname}-*-primary
 
 %changelog
+* Sun Dec 31 2017 Vaughan <vaughan at agrez dot net> 26-2
+- Add FedBerry 27 release key
+
 * Sat Jul 08 2017 Vaughan <vaughan at agrez dot net> 26-1
 - Update for FedBerry 26 release
 - Add FedBerry 26 primary release key

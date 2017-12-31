@@ -1,6 +1,6 @@
 %define bname   fedberry
 %define name    %{bname}-repo
-%define versions 24 25
+%define versions 24 25 26 27
 
 Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
@@ -15,6 +15,8 @@ Source3:    %{bname}-unstable.repo
 Source4:    %{bname}-kernel-rt.repo
 Source5:    RPM-GPG-KEY-%{bname}-24-primary
 Source6:    RPM-GPG-KEY-%{bname}-25-primary
+Source7:    RPM-GPG-KEY-%{bname}-26-primary
+Source8:    RPM-GPG-KEY-%{bname}-27-primary
 BuildArch:  noarch
 
 

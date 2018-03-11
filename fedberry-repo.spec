@@ -6,7 +6,7 @@ Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
 Version:    27
-Release:    1%{?dist}
+Release:    2%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/%{bname}
 Source1:    %{bname}.repo
@@ -23,6 +23,9 @@ Source11:   RPM-GPG-KEY-%{bname}-26-primary
 Source12:   RPM-GPG-KEY-%{bname}-27-primary
 BuildArch:  noarch
 
+Provides:   fedora-repos
+Obsoletes:  fedora-repos
+Conflicts:  fedora-repos
 
 %description
 Package containing a Yum RPM Repository configuration files and GPG key.
@@ -51,6 +54,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-%{bname}-*-primary
 
 %changelog
+* Sun Mar 11 2018 Vaughan <vaughan at agrez dot net> 27-2
+- Add fedora repo files
+- Update fedberry repo files
+
 * Thu Nov 23 2017 Vaughan <vaughan at agrez dot net> 27-1
 - Update for FedBerry 27 release
 - Add FedBerry 27 release key

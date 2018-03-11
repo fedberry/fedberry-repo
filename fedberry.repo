@@ -1,9 +1,10 @@
 [fedberry]
 name=FedBerry $releasever
+failovermethod=priority
 mirrorlist=https://fedberry.github.io/mirrorlist_stable_$releasever
 enabled=1
-gpgcheck=1
 metadata_expire=6h
-mirrorlist_expire=24h
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
 gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedberry-$releasever-primary
-skip_if_unavailable=False

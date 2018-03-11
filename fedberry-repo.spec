@@ -13,10 +13,14 @@ Source1:    %{bname}.repo
 Source2:    %{bname}-testing.repo
 Source3:    %{bname}-unstable.repo
 Source4:    %{bname}-kernel-rt.repo
-Source5:    RPM-GPG-KEY-%{bname}-24-primary
-Source6:    RPM-GPG-KEY-%{bname}-25-primary
-Source7:    RPM-GPG-KEY-%{bname}-26-primary
-Source8:    RPM-GPG-KEY-%{bname}-27-primary
+Source5:    fedora.repo
+Source6:    fedora-updates.repo
+Source7:    fedora-updates-testing.repo
+Source8:    fedora-cisco-openh264.repo
+Source9:    RPM-GPG-KEY-%{bname}-24-primary
+Source10:   RPM-GPG-KEY-%{bname}-25-primary
+Source11:   RPM-GPG-KEY-%{bname}-26-primary
+Source12:   RPM-GPG-KEY-%{bname}-27-primary
 BuildArch:  noarch
 
 

@@ -6,7 +6,7 @@ Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
 Version:    27
-Release:    2%{?dist}
+Release:    3%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/%{bname}
 Source1:    %{bname}.repo
@@ -21,6 +21,7 @@ Source9:    RPM-GPG-KEY-%{bname}-24-primary
 Source10:   RPM-GPG-KEY-%{bname}-25-primary
 Source11:   RPM-GPG-KEY-%{bname}-26-primary
 Source12:   RPM-GPG-KEY-%{bname}-27-primary
+Requires:   fedora-gpg-keys
 BuildArch:  noarch
 
 Provides:   fedora-repos
@@ -54,6 +55,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-%{bname}-*-primary
 
 %changelog
+* Wed Mar 21 2018 Vaughan <vaughan at agrez dot net> 27-3
+- Requires fedora-gpg-keys
+
 * Sun Mar 11 2018 Vaughan <vaughan at agrez dot net> 27-2
 - Add fedora repo files
 - Update fedberry repo files

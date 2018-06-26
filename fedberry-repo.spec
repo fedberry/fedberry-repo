@@ -21,6 +21,7 @@ Source9:    RPM-GPG-KEY-%{bname}-24-primary
 Source10:   RPM-GPG-KEY-%{bname}-25-primary
 Source11:   RPM-GPG-KEY-%{bname}-26-primary
 Source12:   RPM-GPG-KEY-%{bname}-27-primary
+Source13:   RPM-GPG-KEY-%{bname}-28-primary
 Requires:   fedora-gpg-keys
 BuildArch:  noarch
 

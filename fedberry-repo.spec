@@ -6,22 +6,22 @@ Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
 Version:    28
-Release:    1%{?dist}
+Release:    2%{?dist}
 Group:      Development/Tools
-URL:        https://github.com/%{bname}
-Source1:    %{bname}.repo
-Source2:    %{bname}-testing.repo
-Source3:    %{bname}-unstable.repo
-Source4:    %{bname}-kernel-rt.repo
-Source5:    fedora.repo
-Source6:    fedora-updates.repo
-Source7:    fedora-updates-testing.repo
-Source8:    fedora-cisco-openh264.repo
-Source9:    RPM-GPG-KEY-%{bname}-24-primary
-Source10:   RPM-GPG-KEY-%{bname}-25-primary
-Source11:   RPM-GPG-KEY-%{bname}-26-primary
-Source12:   RPM-GPG-KEY-%{bname}-27-primary
-Source13:   RPM-GPG-KEY-%{bname}-28-primary
+URL:        https://github.com/%{name}
+Source1:    https://raw.githubusercontent.com/%{bname}/%{name}/master/%{bname}.repo
+Source2:    https://raw.githubusercontent.com/%{bname}/%{name}/master/%{bname}-testing.repo
+Source3:    https://raw.githubusercontent.com/%{bname}/%{name}/master/%{bname}-unstable.repo
+Source4:    https://raw.githubusercontent.com/%{bname}/%{name}/master/%{bname}-kernel-rt.repo
+Source5:    https://raw.githubusercontent.com/%{bname}/%{name}/master/fedora.repo
+Source6:    https://raw.githubusercontent.com/%{bname}/%{name}/master/fedora-updates.repo
+Source7:    https://raw.githubusercontent.com/%{bname}/%{name}/master/fedora-updates-testing.repo
+Source8:    https://raw.githubusercontent.com/%{bname}/%{name}/master/fedora-cisco-openh264.repo
+Source9:    https://raw.githubusercontent.com/%{bname}/%{name}/master/RPM-GPG-KEY-%{bname}-24-primary
+Source10:   https://raw.githubusercontent.com/%{bname}/%{name}/master/RPM-GPG-KEY-%{bname}-25-primary
+Source11:   https://raw.githubusercontent.com/%{bname}/%{name}/master/RPM-GPG-KEY-%{bname}-26-primary
+Source12:   https://raw.githubusercontent.com/%{bname}/%{name}/master/RPM-GPG-KEY-%{bname}-27-primary
+Source13:   https://raw.githubusercontent.com/%{bname}/%{name}/master/RPM-GPG-KEY-%{bname}-28-primary
 Requires:   fedora-gpg-keys
 BuildArch:  noarch
 
@@ -30,7 +30,7 @@ Obsoletes:  fedora-repos
 Conflicts:  fedora-repos
 
 %description
-Package containing a Yum RPM Repository configuration files and GPG key.
+Package containing Fedberry Yum RPM Repository configuration files and GPG keys.
 
 
 %prep
@@ -58,6 +58,10 @@ done
 
 
 %changelog
+* Tue Jun 26 2018 Vaughan <vaughan at agrez dot net> 28-2
+- Fix Source urls
+- Update spec description
+
 * Tue Jun 26 2018 Vaughan <vaughan at agrez dot net> 28-1
 - Update for FedBerry 28 release
 - Add FedBerry 28 release key

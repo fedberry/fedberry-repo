@@ -10,7 +10,7 @@ type=rpm
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 skip_if_unavailable=False
-exclude=bcm283x-firmware bluez kernel* lightdm-gtk perf plymouth* python-perf
+exclude=bcm283x-firmware bluez-* kernel-* lightdm-gtk linux-firmware perf plymouth-* python-perf
 
 [fedora-debuginfo]
 name=Fedora $releasever - $basearch - Debug
@@ -24,7 +24,7 @@ type=rpm
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 skip_if_unavailable=False
-exclude=bcm283x-firmware bluez kernel* lightdm-gtk perf plymouth* python-perf
+exclude=bcm283x-firmware bluez-* kernel-* lightdm-gtk linux-firmware perf plymouth-* python-perf
 
 [fedora-source]
 name=Fedora $releasever - Source
@@ -38,4 +38,4 @@ type=rpm
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 skip_if_unavailable=False
-exclude=bcm283x-firmware bluez kernel* lightdm-gtk perf plymouth* python-perf
+exclude=bcm283x-firmware bluez-* kernel-* lightdm-gtk linux-firmware perf plymouth-* python-perf

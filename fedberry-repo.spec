@@ -6,7 +6,7 @@ Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
 Version:    28
-Release:    2%{?dist}
+Release:    3%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/%{name}
 Source1:    https://raw.githubusercontent.com/%{bname}/%{name}/master/%{bname}.repo
@@ -42,12 +42,12 @@ cp -a %{sources} .
 
 
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d/
-mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/
-install -m 644 *.repo $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d/
+mkdir -p %{buildroot}%{_sysconfdir}/yum.repos.d
+install -m 644 *.repo %{buildroot}%{_sysconfdir}/yum.repos.d/
+
+mkdir -p %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 for i in %{versions}; do
-    install -m 644 RPM-GPG-KEY-%{bname}-$i-primary $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/
+    install -m 644 RPM-GPG-KEY-%{bname}-$i-primary %{buildroot}%{_sysconfdir}/pki/rpm-gpg/
 done
 
 
@@ -58,6 +58,10 @@ done
 
 
 %changelog
+* Sun Jul 08 2018 Vaughan <vaughan at agrez dot net> 28-3
+- Update excludes
+- Misc spec adjusments
+
 * Tue Jun 26 2018 Vaughan <vaughan at agrez dot net> 28-2
 - Fix Source urls
 - Update spec description

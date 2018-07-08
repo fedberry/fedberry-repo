@@ -1,12 +1,12 @@
 %define bname   fedberry
 %define name    %{bname}-repo
-%define versions 24 25 26 27
+%define versions 24 25 26 27 28
 
 Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
 Version:    27
-Release:    3%{?dist}
+Release:    4%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/%{name}
 Source1:    https://raw.githubusercontent.com/%{bname}/%{name}/master/%{bname}.repo
@@ -29,33 +29,42 @@ Provides:   fedora-repos
 Obsoletes:  fedora-repos
 Conflicts:  fedora-repos
 
+
 %description
 Package containing Fedberry Yum RPM Repository configuration files and GPG keys.
+
 
 %prep
 %setup -c -T
 cp -a %{sources} .
 
+
 %build
 
+
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d/
-mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/
-install -m 644 *.repo $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d/
+mkdir -p %{buildroot}%{_sysconfdir}/yum.repos.d
+install -m 644 *.repo %{buildroot}%{_sysconfdir}/yum.repos.d/
+
+mkdir -p %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 for i in %{versions}; do
-    install -m 644 RPM-GPG-KEY-%{bname}-$i-primary $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/
+    install -m 644 RPM-GPG-KEY-%{bname}-$i-primary %{buildroot}%{_sysconfdir}/pki/rpm-gpg/
 done
 
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*.repo
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-%{bname}-*-primary
 
+
 %changelog
+* Sun Jul 08 2018 Vaughan <vaughan at agrez dot net> 27-4
+- Add FedBerry 28 release key
+- Update excludes
+- Fix source urls
+- Misc spec adjuments
+
 * Wed Mar 21 2018 Vaughan <vaughan at agrez dot net> 27-3
 - Requires fedora-gpg-keys
 
@@ -121,4 +130,4 @@ rm -rf $RPM_BUILD_ROOT
 - Add metadata_expire=6h to repo config
 
 * Tue Sep 08 2015 Vaughan <vaughan at agrez dot net> 0.1-1
-- Initial release. 
+- Initial release.

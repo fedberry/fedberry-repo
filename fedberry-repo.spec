@@ -6,7 +6,7 @@ Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
 Version:    28
-Release:    3%{?dist}
+Release:    4%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/%{name}
 Source1:    https://raw.githubusercontent.com/%{bname}/%{name}/master/%{bname}.repo
@@ -58,6 +58,9 @@ done
 
 
 %changelog
+* Thu Jul 12 2018 Vaughan <vaughan at agrez dot net> 28-4
+- Fix fedora repo excludes
+
 * Sun Jul 08 2018 Vaughan <vaughan at agrez dot net> 28-3
 - Update excludes
 - Misc spec adjusments

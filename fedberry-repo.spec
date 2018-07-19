@@ -6,7 +6,7 @@ Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
 Version:    28
-Release:    5%{?dist}
+Release:    6%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/%{name}
 Source1:    https://raw.githubusercontent.com/%{bname}/%{name}/master/%{bname}.repo
@@ -58,6 +58,10 @@ done
 
 
 %changelog
+* Thu Jul 19 2018 Vaughan <vaughan at agrez dot net> 28-6
+- Remove wildcards from repo excludes
+  (PackageKit does not support/honour them)
+
 * Mon Jul 16 2018 Vaughan <vaughan at agrez dot net> 28-5
 - Fix F28 'update' repo urls
 

@@ -6,7 +6,7 @@ Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
 Version:    28
-Release:    7%{?dist}
+Release:    8%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/%{name}
 Source1:    https://raw.githubusercontent.com/%{bname}/%{name}/master/%{bname}.repo
@@ -58,6 +58,9 @@ done
 
 
 %changelog
+* Sat Jul 28 2018 Vaughan <vaughan at agrez dot net> 28-8
+- Add kernel-headers to fedora repo excludes
+
 * Tue Jul 24 2018 Vaughan <vaughan at agrez dot net> 28-7
 - Add plymouth-plugin-two-step to fedora repo excludes
 

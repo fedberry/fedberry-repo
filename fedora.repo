@@ -10,7 +10,7 @@ type=rpm
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 skip_if_unavailable=False
-exclude=bcm283x-firmware bluez bluez-cups bluez-libs kernel kernel-core kernel-modules kernel-modules-extra kernel-devel lightdm-gtk linux-firmware perf plymouth plymouth-core-libs plymouth-scripts plymouth-theme-charge plymouth-graphics-libs plymouth-plugin-label plymouth-plugin-two-step python-perf
+exclude=bcm283x-firmware bluez bluez-cups bluez-libs kernel kernel-core kernel-headers kernel-modules kernel-modules-extra kernel-devel lightdm-gtk linux-firmware perf plymouth plymouth-core-libs plymouth-scripts plymouth-theme-charge plymouth-graphics-libs plymouth-plugin-label plymouth-plugin-two-step python-perf
 
 [fedora-debuginfo]
 name=Fedora $releasever - $basearch - Debug
@@ -24,7 +24,7 @@ type=rpm
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 skip_if_unavailable=False
-exclude=bcm283x-firmware bluez bluez-cups bluez-libs kernel kernel-core kernel-modules kernel-modules-extra kernel-devel lightdm-gtk linux-firmware perf plymouth plymouth-core-libs plymouth-scripts plymouth-theme-charge plymouth-graphics-libs plymouth-plugin-label plymouth-plugin-two-step python-perf
+exclude=bcm283x-firmware bluez bluez-cups bluez-libs kernel kernel-core kernel-headers kernel-modules kernel-modules-extra kernel-devel lightdm-gtk linux-firmware perf plymouth plymouth-core-libs plymouth-scripts plymouth-theme-charge plymouth-graphics-libs plymouth-plugin-label plymouth-plugin-two-step python-perf
 
 [fedora-source]
 name=Fedora $releasever - Source
@@ -38,4 +38,4 @@ type=rpm
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 skip_if_unavailable=False
-exclude=bcm283x-firmware bluez bluez-cups bluez-libs kernel kernel-core kernel-modules kernel-modules-extra kernel-devel lightdm-gtk linux-firmware perf plymouth plymouth-core-libs plymouth-scripts plymouth-theme-charge plymouth-graphics-libs plymouth-plugin-label plymouth-plugin-two-step python-perf
+exclude=bcm283x-firmware bluez bluez-cups bluez-libs kernel kernel-core kernel-headers kernel-modules kernel-modules-extra kernel-devel lightdm-gtk linux-firmware perf plymouth plymouth-core-libs plymouth-scripts plymouth-theme-charge plymouth-graphics-libs plymouth-plugin-label plymouth-plugin-two-step python-perf

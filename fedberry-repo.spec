@@ -1,12 +1,12 @@
 %define bname   fedberry
 %define name    %{bname}-repo
-%define versions 24 25 26 27 28
+%define versions 24 25 26 27 28 29
 
 Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
 Version:    27
-Release:    8%{?dist}
+Release:    9%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/%{name}
 Source1:    https://raw.githubusercontent.com/%{bname}/%{name}/master/%{bname}.repo
@@ -22,6 +22,7 @@ Source10:   https://raw.githubusercontent.com/%{bname}/%{name}/master/RPM-GPG-KE
 Source11:   https://raw.githubusercontent.com/%{bname}/%{name}/master/RPM-GPG-KEY-%{bname}-26-primary
 Source12:   https://raw.githubusercontent.com/%{bname}/%{name}/master/RPM-GPG-KEY-%{bname}-27-primary
 Source13:   https://raw.githubusercontent.com/%{bname}/%{name}/master/RPM-GPG-KEY-%{bname}-28-primary
+Source14:   https://raw.githubusercontent.com/%{bname}/%{name}/master/RPM-GPG-KEY-%{bname}-29-primary
 Requires:   fedora-gpg-keys
 BuildArch:  noarch
 
@@ -59,6 +60,9 @@ done
 
 
 %changelog
+* Tue Oct 09 2018 Vaughan <vaughan at agrez dot net> 27-9
+- Add FedBerry 29 release key
+
 * Sat Jul 28 2018 Vaughan <vaughan at agrez dot net> 27-8
 - Add kernel-headers to fedora repo excludes
 

@@ -1,7 +1,7 @@
 [fedberry-unstable]
 name=FedBerry Unstable $releasever
 failovermethod=priority
-mirrorlist=https://fedberry.github.io/mirrorlist_unstable
+mirrorlist=https://fedberry.github.io/mirrorlist_unstable_$releasever
 enabled=0
 metadata_expire=6h
 repo_gpgcheck=0

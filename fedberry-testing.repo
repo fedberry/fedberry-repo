@@ -1,7 +1,7 @@
 [fedberry-testing]
 name=FedBerry Testing $releasever
 failovermethod=priority
-mirrorlist=https://fedberry.github.io/mirrorlist_testing
+mirrorlist=https://fedberry.github.io/mirrorlist_testing_$releasever
 enabled=0
 metadata_expire=6h
 repo_gpgcheck=0

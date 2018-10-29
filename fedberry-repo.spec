@@ -6,7 +6,7 @@ Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
 Version:    29
-Release:    1%{?dist}
+Release:    2%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/%{name}
 Source1:    %{url}/raw/master/%{bname}.repo
@@ -65,6 +65,11 @@ done
 
 
 %changelog
+* Mon Oct 29 2018 Vaughan <vaughan at agrez dot net> 29-2
+- Update testing/unstable repos
+- Update Source urls
+- List repos separately in %%files
+
 * Tue Oct 09 2018 Vaughan <vaughan at agrez dot net> 29-1
 - FedBerry 29 release
 

@@ -53,8 +53,14 @@ done
 
 
 %files
-%defattr(-,root,root,-)
-%config(noreplace) %{_sysconfdir}/yum.repos.d/*.repo
+%config %{_sysconfdir}/yum.repos.d/%{bname}.repo
+%config(noreplace) %{_sysconfdir}/yum.repos.d/%{bname}-testing.repo
+%config(noreplace) %{_sysconfdir}/yum.repos.d/%{bname}-unstable.repo
+%config(noreplace) %{_sysconfdir}/yum.repos.d/%{bname}-kernel-rt.repo
+%config %{_sysconfdir}/yum.repos.d/fedora.repo
+%config %{_sysconfdir}/yum.repos.d/fedora-updates.repo
+%config(noreplace) %{_sysconfdir}/yum.repos.d/fedora-updates-testing.repo
+%config(noreplace) %{_sysconfdir}/yum.repos.d/fedora-cisco-openh264.repo
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-%{bname}-*-primary
 
 

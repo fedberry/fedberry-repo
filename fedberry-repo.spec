@@ -6,7 +6,7 @@ Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
 Version:    29
-Release:    2%{?dist}
+Release:    3%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/%{name}
 Source1:    %{url}/raw/master/%{bname}.repo
@@ -59,12 +59,15 @@ done
 %config(noreplace) %{_sysconfdir}/yum.repos.d/%{bname}-kernel-rt.repo
 %config %{_sysconfdir}/yum.repos.d/fedora.repo
 %config %{_sysconfdir}/yum.repos.d/fedora-updates.repo
-%config(noreplace) %{_sysconfdir}/yum.repos.d/fedora-updates-testing.repo
-%config(noreplace) %{_sysconfdir}/yum.repos.d/fedora-cisco-openh264.repo
+%config %{_sysconfdir}/yum.repos.d/fedora-updates-testing.repo
+%config %{_sysconfdir}/yum.repos.d/fedora-cisco-openh264.repo
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-%{bname}-*-primary
 
 
 %changelog
+* Thu Nov 01 2018 Vaughan <vaughan at agrez dot net> 29-3
+- Update excludes in Fedoras repos
+
 * Mon Oct 29 2018 Vaughan <vaughan at agrez dot net> 29-2
 - Update testing/unstable repos
 - Update Source urls

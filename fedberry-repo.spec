@@ -5,34 +5,27 @@
 Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
-Version:    29
-Release:    4%{?dist}
+Version:    30
+Release:    1%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/%{name}
 Source1:    %{url}/raw/master/%{bname}.repo
 Source2:    %{url}/raw/master/%{bname}-testing.repo
 Source3:    %{url}/raw/master/%{bname}-unstable.repo
 Source4:    %{url}/raw/master/%{bname}-kernel-rt.repo
-Source5:    %{url}/raw/master/fedora.repo
-Source6:    %{url}/raw/master/fedora-updates.repo
-Source7:    %{url}/raw/master/fedora-updates-testing.repo
-Source8:    %{url}/raw/master/fedora-cisco-openh264.repo
-Source9:    %{url}/raw/master/RPM-GPG-KEY-%{bname}-24-primary
-Source10:   %{url}/raw/master/RPM-GPG-KEY-%{bname}-25-primary
-Source11:   %{url}/raw/master/RPM-GPG-KEY-%{bname}-26-primary
-Source12:   %{url}/raw/master/RPM-GPG-KEY-%{bname}-27-primary
-Source13:   %{url}/raw/master/RPM-GPG-KEY-%{bname}-28-primary
-Source14:   %{url}/raw/master/RPM-GPG-KEY-%{bname}-29-primary
-Source15:   %{url}/raw/master/RPM-GPG-KEY-%{bname}-30-primary
-Requires:   fedora-gpg-keys
+Source5:    %{url}/raw/master/RPM-GPG-KEY-%{bname}-24-primary
+Source6:    %{url}/raw/master/RPM-GPG-KEY-%{bname}-25-primary
+Source7:    %{url}/raw/master/RPM-GPG-KEY-%{bname}-26-primary
+Source8:    %{url}/raw/master/RPM-GPG-KEY-%{bname}-27-primary
+Source9:    %{url}/raw/master/RPM-GPG-KEY-%{bname}-28-primary
+Source10:   %{url}/raw/master/RPM-GPG-KEY-%{bname}-29-primary
+Source11:   %{url}/raw/master/RPM-GPG-KEY-%{bname}-30-primary
 BuildArch:  noarch
 
-Provides:   fedora-repos
-Obsoletes:  fedora-repos
-Conflicts:  fedora-repos
+Requires:   fedora-repos
 
 %description
-Package containing Fedberry Yum RPM Repository configuration files and GPG keys.
+Package containing Fedberry DNF RPM Repository configuration files and GPG keys.
 
 
 %prep
@@ -45,11 +38,11 @@ cp -a %{sources} .
 
 %install
 mkdir -p %{buildroot}%{_sysconfdir}/yum.repos.d
-install -m 644 *.repo %{buildroot}%{_sysconfdir}/yum.repos.d/
+install -p -m 644 *.repo %{buildroot}%{_sysconfdir}/yum.repos.d/
 
 mkdir -p %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 for i in %{versions}; do
-    install -m 644 RPM-GPG-KEY-%{bname}-$i-primary %{buildroot}%{_sysconfdir}/pki/rpm-gpg/
+    install -p -m 644 RPM-GPG-KEY-%{bname}-$i-primary %{buildroot}%{_sysconfdir}/pki/rpm-gpg/
 done
 
 
@@ -58,14 +51,15 @@ done
 %config(noreplace) %{_sysconfdir}/yum.repos.d/%{bname}-testing.repo
 %config(noreplace) %{_sysconfdir}/yum.repos.d/%{bname}-unstable.repo
 %config(noreplace) %{_sysconfdir}/yum.repos.d/%{bname}-kernel-rt.repo
-%config %{_sysconfdir}/yum.repos.d/fedora.repo
-%config %{_sysconfdir}/yum.repos.d/fedora-updates.repo
-%config %{_sysconfdir}/yum.repos.d/fedora-updates-testing.repo
-%config %{_sysconfdir}/yum.repos.d/fedora-cisco-openh264.repo
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-%{bname}-*-primary
 
 
 %changelog
+* Fri Jul 12 2019 Damian Wrobel <dwrobel@ertelnet.rybnik.pl> - 30-1
+- Remove fedora repositories and add it as Requires
+- Increase priority of fedberry repositories
+- Install with preserving original timestamps
+
 * Fri Apr 19 2019 Vaughan <vaughan at agrez dot net> 29-4
 - Add FedBerry 30 release key
 

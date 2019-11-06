@@ -1,12 +1,12 @@
 %define bname   fedberry
 %define name    %{bname}-repo
-%define versions 24 25 26 27 28 29 30
+%define versions 24 25 26 27 28 29 30 31
 
 Summary:    FedBerry Yum RPM Repositories
 License:    GPLv3
 Name:       %{name}
 Version:    29
-Release:    4%{?dist}
+Release:    5%{?dist}
 Group:      Development/Tools
 URL:        https://github.com/%{name}
 Source1:    %{url}/raw/master/%{bname}.repo
@@ -24,6 +24,7 @@ Source12:   %{url}/raw/master/RPM-GPG-KEY-%{bname}-27-primary
 Source13:   %{url}/raw/master/RPM-GPG-KEY-%{bname}-28-primary
 Source14:   %{url}/raw/master/RPM-GPG-KEY-%{bname}-29-primary
 Source15:   %{url}/raw/master/RPM-GPG-KEY-%{bname}-30-primary
+Source16:   %{url}/raw/master/RPM-GPG-KEY-%{bname}-31-primary
 Requires:   fedora-gpg-keys
 BuildArch:  noarch
 
@@ -66,6 +67,9 @@ done
 
 
 %changelog
+* Wed Nov 06 2019 Vaughan <vaughan at agrez dot net> 29-5
+- Add FedBerry 31 release key
+
 * Fri Apr 19 2019 Vaughan <vaughan at agrez dot net> 29-4
 - Add FedBerry 30 release key
 
